@@ -107,7 +107,7 @@
 
 **服务启停脚本:**
 
-`/datawarehouse_project/script/cluster_zookeeper_control.sh`
+`/Data_Warehouse_Project_20220901/script/cluster_zookeeper_control.sh`
 
 
 
@@ -130,12 +130,12 @@
 
 **配置信息:**
 
-- 默认配置文件：`/datawarehouse_project/conf/hadoop/defalut`
-- 用户配置文件：`/datawarehouse_project/conf/hadoop/user`
+- 默认配置文件：`/Data_Warehouse_Project_20220901/conf/hadoop/defalut`
+- 用户配置文件：`/Data_Warehouse_Project_20220901/conf/hadoop/user`
 
 **服务启停脚本:**
 
-`/datawarehouse_project/script/cluster_hadoop_control.sh`
+`/Data_Warehouse_Project_20220901/script/cluster_hadoop_control.sh`
 
 **优化报告：**
 
@@ -159,7 +159,7 @@
 
 **服务启停脚本:**
 
-`/datawarehouse_project/script/cluster_hive_control.sh`
+`/Data_Warehouse_Project_20220901/script/cluster_hive_control.sh`
 
 
 
@@ -236,7 +236,7 @@
 
 **服务启停脚本:**
 
-`/datawarehouse_project/script/cluster_kafka_control.sh`
+`/Data_Warehouse_Project_20220901/script/cluster_kafka_control.sh`
 
 **优化报告：**
 
@@ -258,7 +258,7 @@
 
 ## 4.1 模拟行为数据生成
 
-数据生成脚本：`/datawarehouse_project/script/generate_buried_log_data.sh`
+数据生成脚本：`/Data_Warehouse_Project_20220901/script/generate_buried_log_data.sh`
 
 
 
@@ -275,7 +275,7 @@
 
 **示例josn：**
 
-`datawarehouse_project/data/simulation_data/log_data/buried_log_data_json_example/page_buried_log_data.json`
+`Data_Warehouse_Project_20220901/data/simulation_data/log_data/buried_log_data_json_example/page_buried_log_data.json`
 
 
 
@@ -283,13 +283,13 @@
 
 **示例josn：**
 
-`datawarehouse_project/data/simulation_data/log_data/buried_log_data_json_example/start_buried_log_data.json`
+`Data_Warehouse_Project_20220901/data/simulation_data/log_data/buried_log_data_json_example/start_buried_log_data.json`
 
 
 
 ## 4.2 模拟业务数据生成
 
-数据生成脚本：`/home/nuochengze/datawarehouse_project/script/generate_business_data.sh`
+数据生成脚本：`/home/nuochengze/Data_Warehouse_Project_20220901/script/generate_business_data.sh`
 
 
 
@@ -319,7 +319,7 @@
 
 **模型设计：**
 
-`/datawarehouse_project/data/simulation_data/business_data/business_data_model_design/business_model_design.xlsx`
+`/Data_Warehouse_Project_20220901/data/simulation_data/business_data/business_data_model_design/business_model_design.xlsx`
 
 | 序号 | 表中文名       | 表英文名          | 状态 |
 | ---- | -------------- | ----------------- | ---- |
@@ -358,7 +358,7 @@
 
 **启动脚本：**
 
-`/datawarehouse_project/script/log_collect_platform_control.sh`
+`/Data_Warehouse_Project_20220901/script/log_collect_platform_control.sh`
 
 ### 5.1.1 logFile>flume>kafka
 
@@ -368,11 +368,11 @@
 
 **配置文件：**
 
-`/datawarehouse_project/conf/flume/file_flume_kafka.conf`
+`/Data_Warehouse_Project_20220901/conf/flume/file_flume_kafka.conf`
 
 **控制脚本:**
 
-`/datawarehouse_project/script/flume_control_file_to_kafka.sh`
+`/Data_Warehouse_Project_20220901/script/flume_control_file_to_kafka.sh`
 
 ### 5.1.2 Kfka>flume>hdfs
 
@@ -382,11 +382,11 @@
 
 **配置文件：**
 
-`/datawarehouse_project/conf/flume/kafka_flume_hdfs.conf`
+`/Data_Warehouse_Project_20220901/conf/flume/kafka_flume_hdfs.conf`
 
 **控制脚本:**
 
-`/datawarehouse_project/script/flume_control_kafka_to_hdfs.sh`
+`/Data_Warehouse_Project_20220901/script/flume_control_kafka_to_hdfs.sh`
 
 ## 5.2 业务数据采集
 
@@ -396,7 +396,7 @@
 
 **控制脚本：**
 
-`/datawarehouse_project/script/sqoop_control_mysql_to_hdfs.sh`
+`/Data_Warehouse_Project_20220901/script/sqoop_control_mysql_to_hdfs.sh`
 
 
 
@@ -516,7 +516,7 @@ location '/warehouse/gmall/ods/ods_event_log';
 
 **ods层数据加载脚本：**
 
-`/home/nuochengze/datawarehouse_project/script/sqoop_control_burieddata_hdfs_to_ods_log.sh`
+`/home/nuochengze/Data_Warehouse_Project_20220901/script/sqoop_control_burieddata_hdfs_to_ods_log.sh`
 
 **脚本执行时间：**
 
@@ -555,11 +555,11 @@ location '/warehouse/gmall/ods/ods_event_log';
 
 **创表语句：**
 
-`/datawarehouse_project/data/warehouse/ods/ods_table_create_script.sql`
+`/Data_Warehouse_Project_20220901/data/warehouse/ods/ods_table_create_script.sql`
 
 **ods层加载数据脚本：**
 
-`/datawarehouse_project/script/sqoop_control_businessdata_hdfs_to_hivedb_ods.sh`
+`/Data_Warehouse_Project_20220901/script/sqoop_control_businessdata_hdfs_to_hivedb_ods.sh`
 
 
 
@@ -576,15 +576,15 @@ location '/warehouse/gmall/ods/ods_event_log';
 
 **创表语句：**
 
-`/datawarehouse_project/data/warehouse/dwd/dwd_table_create_script_burieddata.sql`
+`/Data_Warehouse_Project_20220901/data/warehouse/dwd/dwd_table_create_script_burieddata.sql`
 
 **dwd层数据加载脚本：**
 
-`/datawarehouse_project/script/hive_control_burieddata_hivedb_ods_to_dwd.sh`
+`/Data_Warehouse_Project_20220901/script/hive_control_burieddata_hivedb_ods_to_dwd.sh`
 
 **UDF函数：**
 
-`/datawarehouse_project/codes/hive/customer_udf`
+`/Data_Warehouse_Project_20220901/codes/hive/customer_udf`
 
 ```sql
 create function ParseLogLine_UDF
@@ -723,11 +723,11 @@ create function get_json_array
 
 **创表语句：**
 
-`/datawarehouse_project/data/warehouse/dwd/dwd_table_create_script_businessdata.sql`
+`/Data_Warehouse_Project_20220901/data/warehouse/dwd/dwd_table_create_script_businessdata.sql`
 
 **导数语句：**
 
-`/datawarehouse_project/script/hive_control_businessdata_hivedb_ods_to_dwd.sh`
+`/Data_Warehouse_Project_20220901/script/hive_control_businessdata_hivedb_ods_to_dwd.sh`
 
 
 
@@ -743,11 +743,11 @@ create function get_json_array
 
 **创表语句：**
 
-`/datawarehouse_project/data/warehouse/dws/dws_table_create_script.sql`
+`/Data_Warehouse_Project_20220901/data/warehouse/dws/dws_table_create_script.sql`
 
 **导数语句：**
 
-`/home/nuochengze/datawarehouse_project/script/hive_control_hivedb_dwd_to_dws.sh`
+`/home/nuochengze/Data_Warehouse_Project_20220901/script/hive_control_hivedb_dwd_to_dws.sh`
 
 
 
@@ -778,11 +778,11 @@ create function get_json_array
 
 **创表语句：**
 
-`/datawarehouse_project/data/warehouse/dwt/dwt_table_create_script.sql`
+`/Data_Warehouse_Project_20220901/data/warehouse/dwt/dwt_table_create_script.sql`
 
 **导数语句：**
 
-`/datawarehouse_project/script/hive_control_hivedb_dws_to_dwt.sh`
+`/Data_Warehouse_Project_20220901/script/hive_control_hivedb_dws_to_dwt.sh`
 
 ### 6.2.5 ADS层
 
@@ -802,7 +802,7 @@ create function get_json_array
 
 <img src="https://img2022.cnblogs.com/blog/1837946/202209/1837946-20220901105319748-1073322362.png" style="zoom: 33%;" align="left"/>
 
-**文件存放路径：**`/datawarehouse_project/data/azkaban/*`
+**文件存放路径：**`/Data_Warehouse_Project_20220901/data/azkaban/*`
 
 
 
