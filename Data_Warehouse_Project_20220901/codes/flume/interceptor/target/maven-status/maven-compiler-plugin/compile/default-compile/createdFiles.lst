@@ -1,0 +1,3 @@
+com\nuochengze\flume\interceptor\LogETLInterceptor$Builder.class
+com\nuochengze\flume\interceptor\JsonUtils.class
+com\nuochengze\flume\interceptor\LogETLInterceptor.class

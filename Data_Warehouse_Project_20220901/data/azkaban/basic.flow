@@ -1,0 +1,46 @@
+nodes:
+    - name: sqoop_control_businessdata_mysql_to_hdfs.sh
+      type: command
+      config: 
+        command: sqoop_control_businessdata_mysql_to_hdfs.sh all ${now_date}
+
+    - name: hive_control_burieddata_hdfs_to_hivedb_ods.sh
+      type: command
+      config:
+        command: hive_control_burieddata_hdfs_to_hivedb_ods.sh ${now_date}
+
+    - name: hive_control_burieddata_hivedb_ods_to_dwd.sh
+      type: command
+      dependsOn:
+        - hive_control_burieddata_hdfs_to_hivedb_ods.sh
+      config:
+        command: hive_control_burieddata_hivedb_ods_to_dwd.sh all ${now_date}
+
+    - name: hive_control_businessdata_hdfs_to_hivedb_ods.sh
+      type: command
+      dependsOn:
+        - sqoop_control_businessdata_mysql_to_hdfs.sh
+      config: 
+        command: hive_control_businessdata_hdfs_to_hivedb_ods.sh all ${now_date}
+
+    - name: hive_control_businessdata_hivedb_ods_to_dwd.sh
+      type: command
+      dependsOn:
+        - hive_control_businessdata_hdfs_to_hivedb_ods.sh
+      config: 
+        command: hive_control_businessdata_hivedb_ods_to_dwd.sh all ${now_date} 
+
+    - name: hive_control_hivedb_dwd_to_dws.sh
+      type: command
+      dependsOn:
+        - hive_control_burieddata_hivedb_ods_to_dwd.sh
+        - hive_control_businessdata_hivedb_ods_to_dwd.sh
+      config:
+        command: hive_control_hivedb_dwd_to_dws.sh ${now_date}
+
+    - name: hive_control_hivedb_dws_to_dwt.sh
+      type: command
+      dependsOn:
+        - hive_control_hivedb_dwd_to_dws.sh
+      config:
+        command: hive_control_hivedb_dws_to_dwt.sh ${now_date}

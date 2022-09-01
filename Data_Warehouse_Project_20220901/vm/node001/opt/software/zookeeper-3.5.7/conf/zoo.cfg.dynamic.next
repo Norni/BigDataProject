@@ -1,0 +1,4 @@
+server.1=node001:2888:3888:participant
+server.2=node002:2888:3888:participant
+server.3=node003:2888:3888:participant
+version=1500000000

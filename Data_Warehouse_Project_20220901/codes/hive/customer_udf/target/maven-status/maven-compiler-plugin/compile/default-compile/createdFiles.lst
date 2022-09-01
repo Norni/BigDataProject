@@ -1,0 +1,3 @@
+com\nuochengze\udf\ParseLogLine_UDF.class
+com\nuochengze\udtf\ParseLogLine_UDTF.class
+com\nuochengze\udtf\ExplodeJSONArray.class
